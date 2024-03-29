@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "rtdb-iot-7ed77": {
+      "hosting": {
+        "app": [
+          "rtdb-iot-7ed77"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "rtdb-iot-7ed77"
+  }
+}

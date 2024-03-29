@@ -1,27 +1,75 @@
-#container {
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #c7ddef; /* Color de fondo de la página */
+  overflow: auto; /* Habilitar el desplazamiento vertical en dispositivos pequeños */
+}
+
+.house {
+  width: 80%; /* Ancho original en computadoras */
+  max-width: 800px; /* Ancho máximo en computadoras */
+  height: auto;
+  border: 2px solid #000;
+  border-radius: 20px;
+  background-color: #fff; /* Color de fondo de la casa */
+  padding: 20px; /* Espaciado alrededor de la casa */
+}
+
+.floor {
+  display: flex;
+  flex-direction: column;
+}
+
+.rooms-top,
+.rooms-bottom {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /* Permitir que los elementos se envuelvan a una nueva línea si no caben */
+  justify-content: space-around; /* Espaciado uniforme entre los elementos */
+}
+
+.room-container {
+  width: calc(33.33% - 20px); /* Ancho de cada contenedor de habitación (33.33% menos el margen) */
+  margin: 10px; /* Espaciado entre los contenedores */
   text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+button {
+  width: 100%;
+  padding: 15px; /* Aumentar el tamaño de los botones */
+  border: none;
+  background-color: rgba(255, 255, 255, 0.7); /* Fondo semitransparente para botones */
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+button.on {
+  background-color: rgba(0, 255, 0, 0.7); /* Fondo semitransparente verde para estado de encendido */
 }
 
-#container a {
-  text-decoration: none;
+button.off {
+  background-color: rgba(255, 0, 0, 0.7); /* Fondo semitransparente rojo para estado de apagado */
+}
+
+ion-icon {
+  font-size: 60px; /* Tamaño de los iconos reducido para dispositivos móviles */
+  color: #333; /* Color de los iconos */
+}
+
+.icon {
+  margin-bottom: 5px; /* Espaciado inferior para los iconos */
+}
+
+/* Media queries para ajustar el diseño en dispositivos con diferentes dimensiones */
+@media only screen and (max-width: 768px) {
+  .house {
+    width: 90%; /* Reducir el ancho de la casa en dispositivos móviles */
+    max-width: none; /* Eliminar el ancho máximo en dispositivos móviles */
+  }
+  
+  .room-container {
+    width: calc(50% - 20px); /* Reducir el ancho de los contenedores de habitación en pantallas más pequeñas */
+  }
 }

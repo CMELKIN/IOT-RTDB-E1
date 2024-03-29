@@ -1,20 +1,58 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<div class="container">
+  <div class="house">
+    <div class="floor">
+      <div class="rooms-top">
+        <div class="room-container">
+          <div class="room" id="dormitorio1" (click)="toggleLuces('dormitorio1')">
+            <ion-icon name="bed-outline" class="icon"></ion-icon>
+            <button [ngClass]="{'on': espacios['dormitorio1'], 'off': !espacios['dormitorio1']}">
+              Dormitorio Principal
+            </button>
+          </div>
+        </div>
+        <div class="room-container">
+          <div class="room" id="banio" (click)="toggleLuces('banio')">
+            <ion-icon name="water-outline" class="icon"></ion-icon>
+            <button [ngClass]="{'on': espacios['banio'], 'off': !espacios['banio']}">
+              Baño
+            </button>
+          </div>
+        </div>
+        <div class="room-container">
+          <div class="room" id="dormitorio2" (click)="toggleLuces('dormitorio2')">
+            <ion-icon name="bed-outline" class="icon"></ion-icon>
+            <button [ngClass]="{'on': espacios['dormitorio2'], 'off': !espacios['dormitorio2']}">
+              Segundo Dormitorio
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="rooms-bottom">
+        <div class="room-container">
+          <div class="room" id="cocina" (click)="toggleLuces('cocina')">
+            <ion-icon name="pizza-outline" class="icon"></ion-icon>
+            <button [ngClass]="{'on': espacios['cocina'], 'off': !espacios['cocina']}">
+              Cocina
+            </button>
+          </div>
+        </div>
+        <div class="room-container">
+          <div class="room" id="comedor" (click)="toggleLuces('comedor')">
+            <ion-icon name="restaurant-outline" class="icon"></ion-icon>
+            <button [ngClass]="{'on': espacios['comedor'], 'off': !espacios['comedor']}">
+              Comedor
+            </button>
+          </div>
+        </div>
+        <div class="room-container">
+          <div class="room" id="sala" (click)="toggleLuces('sala')">
+            <ion-icon name="tv-outline" class="icon"></ion-icon>
+            <button [ngClass]="{'on': espacios['sala'], 'off': !espacios['sala']}">
+              Sala de Estar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</ion-content>
+</div>
